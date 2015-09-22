@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require_relative 'data_mapper_setup'
 
-
 class BookmarkManager < Sinatra::Base
 
   set :views, proc { File.join(root, 'views') }
@@ -16,10 +15,12 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links/new' do
-    Link.first_or_create(params)
+    link = Link.new(url: params[:url], title: params[:title])
+    tag = Tag.create(name: params[:tag])
+    link.tags << tag
+    link.save
     redirect '/links'
   end
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
