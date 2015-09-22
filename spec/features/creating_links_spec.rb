@@ -12,4 +12,7 @@ feature 'Creating links' do
     end
   end
 
+  scenario 'There are no links in database at start of the test' do
+    expect(Link.count).to eq(0)
+  end
 end
