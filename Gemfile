@@ -1,8 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-
-ruby '2.2.1'
+ruby '2.2.3'
 
 gem 'sinatra'
 
@@ -15,12 +14,10 @@ group :development, :test do
   gem 'rspec-sinatra'
   gem 'shotgun'
   gem 'launchy'
-#   gem 'selenium-webdriver'
-#   gem 'byebug'
+  # gem 'selenium-webdriver'
+  # gem 'byebug'
   gem 'data_mapper'
   gem 'dm-postgres-adapter'
 end
-
-
 
 # gem "rails"

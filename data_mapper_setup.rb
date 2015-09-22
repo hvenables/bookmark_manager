@@ -8,5 +8,4 @@ require './app/models/link'
 
 DataMapper.finalize
 
-#
-DataMapper.auto_ugrade!
+DataMapper.auto_upgrade!

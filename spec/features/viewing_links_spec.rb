@@ -1,8 +1,4 @@
-require 'spec_helper'
-require './app/models/link.rb'
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
+require './data_mapper_setup'
 
 feature 'Viewing links' do
 
