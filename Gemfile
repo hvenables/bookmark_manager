@@ -1,10 +1,23 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
 ruby '2.2.3'
 
-group :test do
-gem 'rspec'
-gem 'capybara'
+gem 'sinatra'
+
+group :development, :test do
+  gem 'rspec'
+  # gem 'rubocop-rspec'
+  # gem 'rubocop'
+  # gem 'coveralls', require: false
+  gem 'capybara'
+  gem 'rspec-sinatra'
+  gem 'shotgun'
+  gem 'launchy'
+  # gem 'selenium-webdriver'
+  # gem 'byebug'
+  gem 'data_mapper'
+  gem 'dm-postgres-adapter'
 end
+
+# gem "rails"
